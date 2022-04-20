@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
 
 *,
 *::after,
@@ -14,8 +14,9 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--ff-epilogue);
   line-height: 1.6;
+  font-size: var(--fs-body);
   text-rendering: optimizeSpeed;
   width: 100%;
   min-height: 100vh;

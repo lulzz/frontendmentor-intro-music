@@ -1,0 +1,28 @@
+.hero {
+  display: grid;
+  row-gap: 4rem;
+}
+
+.heroImg {
+  display: block;
+}
+
+.heroBody {
+  padding-inline: 1.5rem;
+
+  display: grid;
+  row-gap: 3rem;
+  justify-items: center;
+}
+
+.text, .title {
+  text-align: center;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  width: 100%;
+  justify-items: center;
+  row-gap: 2rem;
+}

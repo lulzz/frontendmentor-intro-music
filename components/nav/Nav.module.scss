@@ -1,0 +1,8 @@
+@use '../../styles/abstracts/mixins' as *;
+
+.nav {
+  display: none;
+  @include mq(sm) {
+    display: grid;
+  }
+}
