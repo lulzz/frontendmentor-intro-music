@@ -22,19 +22,25 @@ body {
   min-height: 100vh;
 }
 
-ul, ol {
-  list-style:none;
+ul,
+ol {
+  list-style: none;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-img, picture {
+img,
+picture {
   width: 100%;
   display: block;
 }
 
 a {
   text-decoration: none;
+  color: #000;
 }

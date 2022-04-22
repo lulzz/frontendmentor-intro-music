@@ -1,0 +1,20 @@
+.dropdownItem {
+  display: grid;
+  font-size: 1.4rem;
+}
+
+.icon {
+  grid-template-columns: auto 1fr;
+  column-gap: 1.5rem;
+}
+
+.iconWrapper {
+  display: grid;
+  align-self: center;
+}
+
+.label {
+  display: grid;
+  align-items: center;
+  color: var(--clr-neutral-medium-grey);
+}

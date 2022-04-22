@@ -3,6 +3,12 @@
 .nav {
   display: none;
   @include mq(sm) {
-    display: grid;
+    display: block;
   }
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  column-gap: 1.5rem;
 }

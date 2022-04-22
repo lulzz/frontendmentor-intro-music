@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import Button from '../components/button/Button';
 import Header from '../components/header/Header';
 
 import styles from './index.module.scss';
@@ -19,10 +20,8 @@ const Home: NextPage = () => {
         <div className={styles.hero}>
           <div className={styles.heroImg}>
             <Image
-              src='/images/image-hero-desktop.png'
-              layout='responsive'
-              width={960}
-              height={1280}
+              src='/images/image-hero-mobile.png'
+              layout='fill'
               alt='boy holding laptop in his hands'
             />
           </div>
@@ -32,12 +31,15 @@ const Home: NextPage = () => {
               Get your team in sync, no matter your loacation. Streamline
               processes, create team rituals, and watch productivity soar.
             </p>
-            <button className={styles.btn}>Learn more</button>
+            <Button variant='contained' href='#'>
+              Learn more
+            </Button>
             <ul className={styles.list}>
               <li>
                 <Image
                   src={'/images/client-databiz.svg'}
                   width={114}
+                  layout='responsive'
                   height={20}
                   alt=''
                 />
@@ -46,6 +48,7 @@ const Home: NextPage = () => {
                 <Image
                   src={'/images/client-audiophile.svg'}
                   width={73}
+                  layout='responsive'
                   height={36}
                   alt=''
                 />
@@ -54,6 +57,7 @@ const Home: NextPage = () => {
                 <Image
                   src={'/images/client-meet.svg'}
                   width={90}
+                  layout='responsive'
                   height={20}
                   alt=''
                 />
@@ -62,6 +66,7 @@ const Home: NextPage = () => {
                 <Image
                   src={'/images/client-maker.svg'}
                   width={83}
+                  layout='responsive'
                   height={24}
                   alt=''
                 />
