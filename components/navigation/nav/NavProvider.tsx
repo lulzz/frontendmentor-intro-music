@@ -1,15 +1,18 @@
 import { useState } from 'react';
-import { NavContext } from './NavContext';
+import { NavContext, Action } from './NavContext';
 
 interface NavProviderProps {
   children: React.ReactNode;
 }
 
 const NavProvider: React.FC<NavProviderProps> = ({ children }) => {
-  const [active, setActive] = useState<string | number>('');
+  const [action, setAction] = useState<Action>({
+    active: '',
+    toggle: false,
+  });
 
   return (
-    <NavContext.Provider value={{ active, setActive }}>
+    <NavContext.Provider value={{ action, setAction }}>
       <>{children}</>
     </NavContext.Provider>
   );

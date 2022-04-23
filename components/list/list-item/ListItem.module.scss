@@ -1,6 +1,10 @@
-.dropdownItem {
+.listItem {
   display: grid;
   font-size: 1.4rem;
+}
+
+.listItem:hover .label {
+  color: var(--clr-neutral-almost-black);
 }
 
 .icon {
@@ -17,4 +21,5 @@
   display: grid;
   align-items: center;
   color: var(--clr-neutral-medium-grey);
+  transition: color 0.2s;
 }

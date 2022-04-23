@@ -1,9 +1,13 @@
-import Dropdown from '../dropdown/Dropdown';
-import DropdownItem from '../dropdown/dropdown-item/DropdownItem';
+import Sidebar from '../../sidebar/Sidebar';
+import SidebarProvider from '../../sidebar/SidebarProvider';
+import Button from '../button/Button';
+import List from '../list/List';
+import ListItem from '../list/list-item/ListItem';
 import Logo from '../logo/Logo';
 import MenuIcon from '../menu-icon/MenuIcon';
-import NavItem from '../nav-item/NavItem';
-import Nav from '../nav/Nav';
+import NavItem from '../navigation/nav-item/NavItem';
+import Nav from '../navigation/nav/Nav';
+import NavWrapper from '../nav-wrapper/NavWrapper';
 
 import styles from './Header.module.scss';
 
@@ -11,34 +15,23 @@ const Header: React.FC = () => {
   return (
     <header className={styles.header}>
       <Logo />
-      <MenuIcon />
-      <Nav>
-        <NavItem id='features' label='Features'>
-          <Dropdown>
-            <DropdownItem icon={{ src: '/images/icon-todo.svg' }}>
-              Todo List
-            </DropdownItem>
-            <DropdownItem icon={{ src: '/images/icon-calendar.svg' }}>
-              Calendar
-            </DropdownItem>
-            <DropdownItem icon={{ src: '/images/icon-reminders.svg' }}>
-              Reminders
-            </DropdownItem>
-            <DropdownItem icon={{ src: '/images/icon-planning.svg' }}>
-              Planning
-            </DropdownItem>
-          </Dropdown>
-        </NavItem>
-        <NavItem id='company' label='Company'>
-          <Dropdown>
-            <DropdownItem>History</DropdownItem>
-            <DropdownItem>Our Team</DropdownItem>
-            <DropdownItem>Blog</DropdownItem>
-          </Dropdown>
-        </NavItem>
-        <NavItem id='careers' label='Careers' href='/careers' />
-        <NavItem id='about' label='About' href='/about' />
-      </Nav>
+      <SidebarProvider>
+        <MenuIcon />
+        <Sidebar>
+          <NavWrapper listType='menu' />
+        </Sidebar>
+      </SidebarProvider>
+      <div className={styles.headerNav}>
+        <NavWrapper listType='dropdown' direction='horizontal' />
+      </div>
+      <div className={styles.buttonGroup}>
+        <Button variant='text' href='#'>
+          Login
+        </Button>
+        <Button variant='outlined' href='#'>
+          Register
+        </Button>
+      </div>
     </header>
   );
 };

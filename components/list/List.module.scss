@@ -1,0 +1,26 @@
+.list {
+  display: grid;
+  row-gap: 1.5rem;
+  width: max-content;
+  font-size: 1.4rem;
+
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: #fff;
+
+  box-shadow: 0 15px 30px var(--clr-neutral-dropdown-shadow);
+}
+
+.dropdown {
+  position: absolute;
+  z-index: 100;
+  top: 170%;
+  right: 0;
+}
+
+.menu {
+  position: relative;
+  background-color: transparent;
+  box-shadow: none;
+  padding-left: 3rem;
+}

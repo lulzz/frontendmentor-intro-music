@@ -9,21 +9,40 @@
 
 // text
 .text {
-  color: var(--clr-neutral-almost-black);
+  color: var(--clr-neutral-medium-grey);
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--clr-neutral-medium-black);
+  }
 }
 
-.outlined, .contained {
+.outlined,
+.contained {
   padding: 1rem 2.5rem;
 }
 
 // outlined
 .outlined {
-  border: 1px solid var(--clr-neutral-almost-black);
-  color: var(--clr-neutral-almost-black);
+  outline: 1px solid var(--clr-neutral-medium-grey);
+  color: var(--clr-neutral-medium-grey);
+  font-size: inherit;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--clr-neutral-medium-black);
+  }
 }
 
-// contained 
+// contained
 .contained {
-    background-color: var(--clr-neutral-almost-black);
-    color: var(--clr-neutral-almost-white);
+  background-color: var(--clr-neutral-almost-black);
+  color: var(--clr-neutral-almost-white);
+  transition: color 0.2s ease, background-color 0.2s ease;
+
+  &:hover {
+    color: var(--clr-neutral-almost-black);
+    background-color: var(--clr-neutral-almost-white);
+    outline: 1px solid var(--clr-neutral-almost-black);
+  }
 }

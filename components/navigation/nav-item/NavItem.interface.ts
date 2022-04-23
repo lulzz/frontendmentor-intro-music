@@ -1,6 +1,9 @@
+import Icon from '../../icon/Icon.interface';
+
 export default interface NavItemProps {
-  children?: React.ReactNode;
   id: number | string;
   label: string;
   href?: string;
+  icon?: Icon;
+  children?: React.ReactNode;
 }

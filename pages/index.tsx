@@ -20,13 +20,18 @@ const Home: NextPage = () => {
         <div className={styles.hero}>
           <div className={styles.heroImg}>
             <Image
+              priority={true}
               src='/images/image-hero-mobile.png'
               layout='fill'
               alt='boy holding laptop in his hands'
+              objectFit='cover'
+              objectPosition='center'
             />
           </div>
           <div className={styles.heroBody}>
-            <h1 className={styles.title}>Make remote work</h1>
+            <h1 className={styles.title}>
+              <span>Make</span> remote work
+            </h1>
             <p className={styles.text}>
               Get your team in sync, no matter your loacation. Streamline
               processes, create team rituals, and watch productivity soar.

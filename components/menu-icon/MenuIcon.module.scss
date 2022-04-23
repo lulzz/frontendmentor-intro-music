@@ -6,7 +6,7 @@
   height: 1.8rem;
   cursor: pointer;
 
-  @include mq(sm) {
+  @include mq(lg) {
     display: none;
   }
 }
