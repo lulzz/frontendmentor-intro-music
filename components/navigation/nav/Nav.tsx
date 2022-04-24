@@ -4,9 +4,9 @@ import NavProvider from './NavProvider';
 
 import styles from './Nav.module.scss';
 
-const Nav: React.FC<NavProps> = ({ children, direction }) => {
+const Nav: React.FC<NavProps> = ({ children, direction, globalIcon }) => {
   return (
-    <NavProvider>
+    <NavProvider globalIcon={globalIcon ?? { src: '' }}>
       <nav className={`${styles.nav}`}>
         <ul className={`${styles.items}  ${direction && styles['horizontal']}`}>
           {children}

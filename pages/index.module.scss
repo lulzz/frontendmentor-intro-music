@@ -25,9 +25,13 @@
     grid-template-columns: auto auto;
     grid-template-rows: none;
     row-gap: 0px;
-    padding-inline: 10rem;
+    padding-inline: 5rem;
     align-content: center;
     justify-content: space-between;
+  }
+
+  @include mq(xl) {
+    padding-inline: 10rem;
   }
 }
 

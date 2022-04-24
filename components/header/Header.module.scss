@@ -8,10 +8,11 @@
   column-gap: 5rem;
   font-size: 1.4rem;
 
-  padding: 2rem 5rem;
+  padding: 2rem 2rem;
 
   @include mq(lg) {
     grid-template-columns: min-content min-content 1fr;
+    padding-inline: 5rem;
   }
 }
 

@@ -5,6 +5,7 @@ import NavItemProps from './NavItem.interface';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Icon from '../../icon/Icon';
+import IconProps from '../../icon/Icon.interface';
 
 const NavItem: React.FC<NavItemProps> = ({
   children,
@@ -13,7 +14,7 @@ const NavItem: React.FC<NavItemProps> = ({
   href,
   icon,
 }) => {
-  const { action, setAction } = useNavContext();
+  const { action, setAction, globalIcon } = useNavContext();
   const router = useRouter();
 
   const handleToggleActiveNavItem = (id: string | number, action: Action) => {
@@ -28,6 +29,17 @@ const NavItem: React.FC<NavItemProps> = ({
         toggle: !action.toggle,
       });
     }
+  };
+
+  const handleIcon = (iconProps: IconProps) => {
+    return (
+      <Icon
+        src={iconProps ? iconProps.src : ''}
+        width={iconProps && iconProps.width}
+        height={iconProps && iconProps.height}
+        alt={iconProps && iconProps.alt}
+      />
+    );
   };
 
   return (
@@ -48,14 +60,9 @@ const NavItem: React.FC<NavItemProps> = ({
             action.active === id && action.toggle && styles.active
           }`}
         >
-          {icon && (
-            <Icon
-              src={icon.src}
-              width={icon.width}
-              height={icon.height}
-              alt={icon.alt}
-            />
-          )}
+          {children && globalIcon
+            ? globalIcon && handleIcon(globalIcon)
+            : icon && handleIcon(icon)}
         </div>
       </div>
       {children && action.active === id && action.toggle && <>{children}</>}

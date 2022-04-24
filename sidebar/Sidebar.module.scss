@@ -42,7 +42,7 @@
 
   z-index: 50;
 
-  @include mq(md) {
+  @include mq(lg) {
     display: none;
   }
 }

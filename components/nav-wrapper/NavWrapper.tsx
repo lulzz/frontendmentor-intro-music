@@ -6,16 +6,15 @@ import NawWrapperProps from './NavWrapper.interface';
 
 const NawWrapper: React.FC<NawWrapperProps> = ({ listType, direction }) => {
   return (
-    <Nav direction={direction && direction}>
-      <NavItem
-        id='features'
-        label='Features'
-        icon={{
-          src: '/images/icon-arrow-down.svg',
-          width: 10,
-          height: 6,
-        }}
-      >
+    <Nav
+      direction={direction && direction}
+      globalIcon={{
+        src: '/images/icon-arrow-down.svg',
+        width: 10,
+        height: 6,
+      }}
+    >
+      <NavItem id='features' label='Features'>
         <List type={listType}>
           <ListItem href='#' icon={{ src: '/images/icon-todo.svg' }}>
             Todo List
