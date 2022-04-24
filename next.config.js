@@ -5,8 +5,8 @@ const nextConfig = {
     loader: 'akamai',
     path: '',
   },
-  // basePath: '/frontendmentor-intro-music',
-  // assetPrefix: '/frontendmentor-intro-music',
+  basePath: '/frontendmentor-intro-music',
+  assetPrefix: '/frontendmentor-intro-music',
 };
 
 module.exports = nextConfig;
