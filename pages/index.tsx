@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <link
           rel='icon'
           type='image/png'
-          href='/images/favicon-32x32.png'
+          href='/frontendmentor-intro-music/images/favicon-32x32.png'
         ></link>
       </Head>
 
